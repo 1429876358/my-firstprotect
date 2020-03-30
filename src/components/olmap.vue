@@ -1,6 +1,6 @@
 <template>
     <div id="map" ref="rootmap">
-
+      <!-- <div>{{tempnum}}</div> -->
     </div>
 </template>
 
@@ -11,11 +11,14 @@ import mapconfig from '../config/mapconfig'
 export default {
   data() {
     return {
-      map: null
+      map: null,
+      tempnum:''
     };
   },
   mounted() {
+
     var mapcontainer = this.$refs.rootmap;
+    this.tempnum=mapconfig.temp()
     this.map = new Map({
       target: mapcontainer,
       layers: mapconfig.streetmap(),
