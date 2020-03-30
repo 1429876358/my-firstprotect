@@ -4,7 +4,6 @@ import OSM from "ol/source/OSM"
 import XYZ from 'ol/source/XYZ'
 
 let maptype=1         //0表示部署的离线瓦片地图，1表示OSM,2表示使用Arcgis在线午夜蓝地图服务
-
 var streetmap=function(){
     var maplayer=null;
     switch(maptype){
